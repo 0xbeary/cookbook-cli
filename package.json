@@ -1,10 +1,10 @@
 {
-  "name": "sqd-pipes-test",
+  "name": "cookbook-cli",
   "version": "0.1.10",
   "description": "CLI for adding Solana data pipes to your indexer",
   "type": "module",
   "bin": {
-    "sqd-pipes-test": "./dist/index.js"
+    "cookbook-cli": "./dist/index.js"
   },
   "files": [
     "dist",

@@ -26,6 +26,7 @@ export async function copyTemplateDirectory(
   targetDir: string,
   variables: TemplateVariables
 ): Promise<void> {
+  await fs.ensureDir(targetDir);
   const entries = await fs.readdir(templateDir);
   
   for (const entry of entries) {
@@ -53,4 +54,20 @@ export async function copyTemplateDirectory(
       }
     }
   }
+}
+
+export async function copyPipeTemplate(
+  templateDir: string,
+  targetDir: string,
+  variables: TemplateVariables = {}
+): Promise<void> {
+  return copyTemplateDirectory(templateDir, targetDir, variables);
+}
+
+export async function copyModuleTemplate(
+  templateDir: string,
+  targetDir: string,
+  variables: TemplateVariables = {}
+): Promise<void> {
+  return copyTemplateDirectory(templateDir, targetDir, variables);
 }
