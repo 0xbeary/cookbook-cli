@@ -86,7 +86,7 @@ app.get('/events', async (c) => {
             }
             
           } catch (error) {
-            logger.error('SSE polling error:', error);
+            logger.error({ error }, 'SSE polling error');
             controller.enqueue(encoder.encode(`data: ${JSON.stringify({
               type: 'error',
               message: 'Database query failed'
@@ -261,7 +261,7 @@ async function startServer() {
     await clickhouse.ping();
     logger.info('ClickHouse connection established');
   } catch (error) {
-    logger.warn('ClickHouse connection failed:', error);
+    logger.warn({ error }, 'ClickHouse connection failed');
   }
   
   serve({

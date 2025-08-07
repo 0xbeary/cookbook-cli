@@ -1,5 +1,5 @@
 {
-  "name": "hono-api-pipe",
+  "name": "hono",
   "version": "1.0.0",
   "description": "Hono-based API server with SSE for real-time ClickHouse data streaming",
   "main": "index.ts",

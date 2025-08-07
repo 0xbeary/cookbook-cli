@@ -84,7 +84,12 @@ export async function addTemplate(templateName: string, templateType?: 'pipe' | 
     if (foundType === 'pipe') {
       destDir = path.join(cwd, 'src/pipes', templateName);
     } else {
-      destDir = path.join(cwd, 'src/modules', templateName);
+      // Special case for hono - install as src/api/
+      if (templateName === 'hono') {
+        destDir = path.join(cwd, 'src/api');
+      } else {
+        destDir = path.join(cwd, 'src/modules', templateName);
+      }
     }
     
     // Copy template files
@@ -245,9 +250,9 @@ function showUsageInstructions(templateName: string, templateType: 'pipe' | 'mod
   } else {
     // Module usage instructions
     switch (templateName) {
-      case 'hono-api':
+      case 'hono':
         console.log(chalk.gray('  // Start the API server:'));
-        console.log(chalk.gray('  cd src/modules/hono-api'));
+        console.log(chalk.gray('  cd src/api'));
         console.log(chalk.gray('  npm start'));
         break;
       default:

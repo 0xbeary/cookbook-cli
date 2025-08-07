@@ -29,7 +29,7 @@ This reads all `.sql` files in the `sql/views/` directory and executes them agai
 
 ```
 Independent Pipes ──────────────────────► Base Tables
-(pumpfun-tokens, hono-api, etc)           (Raw Data)
+(pumpfun-tokens, hono, etc)           (Raw Data)
                                            │
                    View Sync ─────────────► All View Types
                    (sql/views/*.sql)       (Regular, Materialized, Live, Window)

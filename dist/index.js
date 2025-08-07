@@ -66,7 +66,11 @@ async function addTemplate(templateName, templateType) {
     if (foundType === "pipe") {
       destDir = path.join(cwd, "src/pipes", templateName);
     } else {
-      destDir = path.join(cwd, "src/modules", templateName);
+      if (templateName === "hono") {
+        destDir = path.join(cwd, "src/api");
+      } else {
+        destDir = path.join(cwd, "src/modules", templateName);
+      }
     }
     await fs.copy(templateDir, destDir);
     console.log(chalk.green(`\u2713 Added ${foundType} "${templateName}"`));
@@ -192,9 +196,9 @@ function showUsageInstructions(templateName, templateType) {
     }
   } else {
     switch (templateName) {
-      case "hono-api":
+      case "hono":
         console.log(chalk.gray("  // Start the API server:"));
-        console.log(chalk.gray("  cd src/modules/hono-api"));
+        console.log(chalk.gray("  cd src/api"));
         console.log(chalk.gray("  npm start"));
         break;
       default:
@@ -204,7 +208,7 @@ function showUsageInstructions(templateName, templateType) {
 }
 
 // src/commands/add.ts
-var addCommand = new Command().name("add").description("Add a pipe or module to your project").argument("<template>", "template to add (e.g. pumpfun-tokens, hono-api)").option("-t, --type <type>", "specify template type (pipe or module)").action(async (template, options) => {
+var addCommand = new Command().name("add").description("Add a pipe or module to your project").argument("<template>", "template to add (e.g. pumpfun-tokens, hono)").option("-t, --type <type>", "specify template type (pipe or module)").action(async (template, options) => {
   await addTemplate(template, options.type);
 });
 
