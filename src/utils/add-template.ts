@@ -21,7 +21,7 @@ function findPackageRoot(): string {
       try {
         const pkg = fs.readJsonSync(packageJsonPath);
         // Make sure it's our package
-        if (pkg.name === 'pipes-sdk-kit') {
+        if (pkg.name === 'pipes-sdk-toolkit') {
           return dir;
         }
       } catch {
@@ -43,7 +43,7 @@ export async function addTemplate(templateName: string, templateType?: 'pipe' | 
     
     if (!fs.existsSync(packageJsonPath)) {
       console.log(chalk.red('Error: Not in a valid project directory'));
-      console.log(chalk.gray('Run: pipes-sdk-kit init'));
+      console.log(chalk.gray('Run: pipes-sdk-toolkit init'));
       return;
     }
 
@@ -167,8 +167,8 @@ async function showAvailableTemplates(packageRoot: string) {
     console.log(chalk.gray('Could not load template registry'));
   }
   
-  console.log(chalk.gray('Usage: pipes-sdk-kit add <template-name>'));
-  console.log(chalk.gray('       pipes-sdk-kit list'));
+  console.log(chalk.gray('Usage: pipes-sdk-toolkit add <template-name>'));
+  console.log(chalk.gray('       pipes-sdk-toolkit list'));
 }
 
 async function updateDependencies(templateName: string, templateType: 'pipe' | 'module', projectDir: string) {

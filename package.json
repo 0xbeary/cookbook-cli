@@ -1,10 +1,10 @@
 {
-  "name": "pipes-sdk-kit",
+  "name": "pipes-sdk-toolkit",
   "version": "0.0.1",
   "description": "CLI for adding Solana data pipes to your indexer",
   "type": "module",
   "bin": {
-    "pipes-sdk-kit": "./dist/index.js"
+    "pipes-sdk-toolkit": "./dist/index.js"
   },
   "files": [
     "dist",
