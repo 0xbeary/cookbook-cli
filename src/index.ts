@@ -7,9 +7,9 @@ import { listCommand } from './commands/list.js';
 const program = new Command();
 
 program
-  .name('cookbook-cli')
+  .name('pipes-sdk-cli')
   .description('CLI for adding Solana data pipes to your indexer')
-  .version('0.1.6');
+  .version('0.0.1');
 
 program.addCommand(addCommand);
 program.addCommand(initCommand);

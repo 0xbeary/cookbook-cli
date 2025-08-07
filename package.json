@@ -1,10 +1,10 @@
 {
-  "name": "cookbook-cli",
-  "version": "0.1.14",
+  "name": "pipes-sdk-cli",
+  "version": "0.0.1",
   "description": "CLI for adding Solana data pipes to your indexer",
   "type": "module",
   "bin": {
-    "cookbook-cli": "./dist/index.js"
+    "pipes-sdk-cli": "./dist/index.js"
   },
   "files": [
     "dist",
