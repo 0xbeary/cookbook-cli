@@ -14,7 +14,7 @@ function findPackageRoot(): string {
     if (fs.existsSync(packageJsonPath)) {
       try {
         const pkg = fs.readJsonSync(packageJsonPath);
-        if (pkg.name === 'pipes-sdk-cli') {
+        if (pkg.name === 'pipes-sdk-kit') {
           return dir;
         }
       } catch {
@@ -91,9 +91,9 @@ export const listCommand = new Command()
       }
       
       console.log(chalk.gray('Usage:'));
-      console.log(chalk.gray('  pipes-sdk-cli add <template-name>'));
-      console.log(chalk.gray('  pipes-sdk-cli add <template-name> --type pipe'));
-      console.log(chalk.gray('  pipes-sdk-cli add <template-name> --type module'));
+      console.log(chalk.gray('  pipes-sdk-kit add <template-name>'));
+      console.log(chalk.gray('  pipes-sdk-kit add <template-name> --type pipe'));
+      console.log(chalk.gray('  pipes-sdk-kit add <template-name> --type module'));
       
     } catch (error) {
       console.log(chalk.red('Error loading templates:'), error);
