@@ -1,6 +1,6 @@
 {
   "name": "cookbook-cli",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "CLI for adding Solana data pipes to your indexer",
   "type": "module",
   "bin": {
