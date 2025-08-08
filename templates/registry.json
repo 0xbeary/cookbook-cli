@@ -1,12 +1,4 @@
 {
-  "modules": {
-    "hono": {
-      "description": "Fast API server with ClickHouse integration (installs as src/api/)",
-      "tags": ["api", "rest", "clickhouse", "hono"],
-      "category": "api",
-      "dependencies": ["hono", "@hono/node-server", "@clickhouse/client"]
-    }
-  },
   "pipes": {
     "pumpfun-tokens": {
       "description": "Track PumpFun token creation events",

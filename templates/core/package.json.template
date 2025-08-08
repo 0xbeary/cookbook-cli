@@ -1,4 +1,11 @@
 {
+  "name": "{{projectName}}",
+  "version": "1.0.0",
+  "scripts": {
+    "sync": "ts-node sql/scripts/sync.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
     "@clickhouse/client": "^1.10.1",
     "@hono/node-server": "^1.12.2",
@@ -10,5 +17,8 @@
     "@types/node": "^22.13.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

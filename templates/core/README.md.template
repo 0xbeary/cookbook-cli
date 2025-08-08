@@ -1,6 +1,6 @@
 # {{projectName}} - ClickHouse Schema Management
 
-Base project template for managing ClickHouse schemas and materialized views.
+Core project template for managing ClickHouse schemas and materialized views.
 
 ## Quick Start
 

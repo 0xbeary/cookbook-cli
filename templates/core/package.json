@@ -1,13 +1,19 @@
 {
-  "name": "{{projectName}}",
+  "name": "core-dev",
   "version": "1.0.0",
   "scripts": {
     "sync": "ts-node sql/scripts/sync.ts",
     "build": "tsc",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "dev:simple-pipe": "cd pipes/simple-pipe && npm run dev",
+    "start:simple-pipe": "cd pipes/simple-pipe && npm run start",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
   },
   "dependencies": {
     "@clickhouse/client": "^1.10.1",
+    "@hono/node-server": "^1.12.2",
+    "hono": "^4.6.3",
     "pino": "^9.6.0",
     "pino-pretty": "^13.0.0"
   },

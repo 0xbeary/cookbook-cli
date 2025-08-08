@@ -17,9 +17,16 @@ export const logger = pino({
   base: {},
 })
 
-/**gp
+/**
  * Creates a child logger with additional context
  */
 export function createChildLogger(context: Record<string, unknown>) {
   return logger.child(context)
+}
+
+/**
+ * Creates a logger with a specific name/context
+ */
+export function createLogger(name: string) {
+  return logger.child({ name })
 }

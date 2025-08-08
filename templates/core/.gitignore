@@ -1,0 +1,21 @@
+# Development files (non-template versions)
+/templates/core/docker-compose.yml
+/templates/core/package.json
+/templates/core/README.md
+
+# Node modules and build outputs
+node_modules/
+dist/
+*.log
+
+# Environment files
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
