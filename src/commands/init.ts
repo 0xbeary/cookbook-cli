@@ -62,7 +62,7 @@ export const initCommand = new Command()
     
     // // Add selected pipes
     // if (response.pipes && response.pipes.length > 0) {
-    //   console.log(chalk.gray(`  pipes-sdk-toolkit add ${response.pipes.join(' ')}`));
+    //   console.log(chalk.gray(`  pipehouse add ${response.pipes.join(' ')}`));
     // }
     
     console.log(chalk.gray('  npm start'));

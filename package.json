@@ -1,10 +1,10 @@
 {
-  "name": "pipes-sdk-toolkit",
+  "name": "pipehouse",
   "version": "0.0.1",
   "description": "CLI for adding Solana data pipes to your indexer",
   "type": "module",
   "bin": {
-    "pipes-sdk-toolkit": "./dist/index.js"
+    "pipehouse": "./dist/index.js"
   },
   "files": [
     "dist",
