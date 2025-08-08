@@ -18,7 +18,7 @@ export const initCommand = new Command()
         type: 'text',
         name: 'projectName',
         message: 'Project name:',
-        initial: 'pipes-indexer'
+        initial: 'cookbook'
       }
     ]);
 
