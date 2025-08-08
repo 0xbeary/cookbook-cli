@@ -21,7 +21,7 @@ function findPackageRoot(): string {
       try {
         const pkg = fs.readJsonSync(packageJsonPath);
         // Make sure it's our package
-        if (pkg.name === 'pipehouse') {
+        if (pkg.name === 'cookbook-cli') {
           return dir;
         }
       } catch {
@@ -43,7 +43,7 @@ export async function addTemplate(templateName: string, templateType?: 'pipe' | 
     
     if (!fs.existsSync(packageJsonPath)) {
       console.log(chalk.red('Error: Not in a valid project directory'));
-      console.log(chalk.gray('Run: pipehouse init'));
+      console.log(chalk.gray('Run: cookbook-cli init'));
       return;
     }
 
@@ -167,8 +167,8 @@ async function showAvailableTemplates(packageRoot: string) {
     console.log(chalk.gray('Could not load template registry'));
   }
   
-  console.log(chalk.gray('Usage: pipehouse add <template-name>'));
-  console.log(chalk.gray('       pipehouse list'));
+  console.log(chalk.gray('Usage: cookbook-cli add <template-name>'));
+  console.log(chalk.gray('       cookbook-cli list'));
 }
 
 async function updateDependencies(templateName: string, templateType: 'pipe' | 'module', projectDir: string) {

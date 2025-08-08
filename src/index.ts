@@ -7,7 +7,7 @@ import { listCommand } from './commands/list.js';
 const program = new Command();
 
 program
-  .name('pipehouse')
+  .name('cookbook-cli')
   .description('CLI for adding Solana data pipes to your indexer')
   .version('0.0.1');
 
